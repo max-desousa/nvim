@@ -4,7 +4,8 @@ print("Welcome PaperJammer!")
 --[[
 vim.cmd("colorscheme zaibatsu")
 --]]
-vim.cmd("colorscheme kanagawa")
+--vim.cmd("colorscheme kanagawa")
+vim.cmd("colorscheme cyberdream")
 
 vim.cmd("set cc=80")
 vim.cmd("set cursorcolumn")
