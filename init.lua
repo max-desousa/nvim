@@ -23,6 +23,8 @@ vim.cmd("set tabstop=2")
 vim.cmd("set listchars=tab:<->,space:·,eol:$,extends:»,precedes:«")
 vim.cmd("set list")
 
+vim.opt.mouse = ""
+
 vim.api.nvim_create_autocmd("FileType", {
   pattern = "netrw",
   callback = function()
