@@ -17,7 +17,7 @@ return {
         root_dir = lspconfig.util.root_pattern("build.zig", ".git"),
         settings = {
           zls = {
-            zig_exe_path = "/home/max/.zig/zig",
+            zig_exe_path = "/home/max/.zig/zig/zig",
             zig_lib_path = "/home/max/.zig/lib",
           }
         }
