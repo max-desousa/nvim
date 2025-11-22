@@ -18,7 +18,7 @@ return {
         settings = {
           zls = {
             zig_exe_path = "/home/max/.zig/zig/zig",
-            zig_lib_path = "/home/max/.zig/lib",
+            zig_lib_path = "/home/max/.zig/zig/lib",
           }
         }
       }
