@@ -25,3 +25,11 @@ vim.api.nvim_create_autocmd("FileType", {
     vim.wo.relativenumber = true
   end
 })
+
+vim.diagnostic.config({
+  virtual_text = true,        -- This enables the red text at the end of the line
+  signs = true,               -- Keeps the 'E' in the sign column (gutter)
+  underline = true,           -- Underlines the problematic code
+  update_in_insert = false,   -- Don't update while you're still typing
+  severity_sort = true,
+})

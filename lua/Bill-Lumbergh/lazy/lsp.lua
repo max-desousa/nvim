@@ -43,7 +43,10 @@ return {
           }
         }
       })
+
       vim.lsp.enable('zls')
+      vim.lsp.enable('rust_analyzer')
+
       vim.api.nvim_create_autocmd("LspAttach", {
         callback = function(args)
           local opts = { buffer = args.buf }
