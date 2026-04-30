@@ -3,7 +3,21 @@ return {
 	requires = { {'nvim-lua/plenary.nvim'} },
 
   config = function()
-    require('telescope').setup({})
+    require('telescope').setup({
+      defaults = {
+        layout_strategy = "vertical",   -- This is the key line
+        -- Optional: fine-tune the vertical layout
+        layout_config = {
+          vertical = {
+            width = 0.8,          -- 80% of screen width (0-1 or fixed number)
+            height = 0.9,         -- 90% of screen height
+            preview_height = 0.5, -- Preview takes ~half the height (results above it)
+            prompt_position = "top",   -- or "bottom"
+            mirror = false,       -- Set true to mirror results/preview order in some cases
+          },
+        },
+      },
+    })
 
     local builtin = require('telescope.builtin')
 
