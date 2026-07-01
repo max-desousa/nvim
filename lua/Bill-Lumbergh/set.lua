@@ -33,3 +33,38 @@ vim.diagnostic.config({
   update_in_insert = false,   -- Don't update while you're still typing
   severity_sort = true,
 })
+
+vim.cmd.colorscheme("retrobox")
+
+-- Commenting out random color scheme... it's nice to sample things but it's
+-- bad after finding a colorscheme that you start liking
+--
+-- -- Random colorscheme on startup
+-- -- Easiest way to get all possible color schemes to add to this list:
+-- -- :lua print(vim.inspect(vim.fn.getcompletion("", "color")))
+-- vim.api.nvim_create_autocmd("VimEnter", {
+--   callback = function()
+--     -- Seed the random number generator properly
+--     math.randomseed(os.time() + vim.fn.getpid())   -- Good enough
+--     -- Alternative (even more random):
+--     -- math.randomseed(os.time() ^ vim.loop.hrtime())
+-- 
+--     local schemes = {
+--       "blue", "catppuccin", "citruszest", "cyberdream", "cyberdream-light",
+--       "darkblue", "default", "delek", "desert", "elflord", "evening",
+--       "habamax", "industry", "kanagawa", "kanagawa-dragon", "kanagawa-lotus",
+--       "kanagawa-wave", "koehler", "lunaperche", "morning", "murphy", "pablo",
+--       "peachpuff", "quiet", "retrobox", "ron", "rose-pine", "rose-pine-dawn",
+--       "rose-pine-main", "rose-pine-moon", "shine", "slate", "sorbet", "torte",
+--       "unokai", "vim", "wildcharm", "zaibatsu", "zellner",
+--       -- Add more here as you install them
+--     }
+-- 
+--     local random = schemes[math.random(#schemes)]
+--     vim.cmd("colorscheme " .. random)
+-- 
+--     -- Optional: Show which one was chosen
+--     vim.notify("Colorscheme: " .. random, vim.log.levels.INFO)
+--   end,
+-- })
+-- 

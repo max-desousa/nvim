@@ -11,6 +11,7 @@ return {
         --  fallbackFlags = { '-std=c++17' },
         --},
       })
+      vim.lsp.config('texlab', {})
       -- vim.lsp.config('zls', {
       --   filetypes = { "zig" },
       --   -- root_dir = lspconfig.util.root_pattern("build.zig", ".git"),
@@ -32,7 +33,13 @@ return {
       --     }
       --   }
       -- })
+
+      local capabilities = require('cmp_nvim_lsp').default_capabilities()
+
       vim.lsp.config('zls', {
+        capabilities = capabilities,
+        filetypes = { "zig" },
+        root_dir = vim.fs.root(0, { "build.zig", ".git" }),
         settings = {
           zls = {
             zig_exe_path = "/home/max/.zig/zig/zig",
@@ -46,6 +53,7 @@ return {
 
       vim.lsp.enable('zls')
       vim.lsp.enable('rust_analyzer')
+      vim.lsp.enable('texlab')
 
       vim.api.nvim_create_autocmd("LspAttach", {
         callback = function(args)
